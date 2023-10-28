@@ -1,0 +1,40 @@
+{
+  "todos": {
+    "running": [
+      {
+        "title": "ㅎㅎ",
+        "detail": "ㅎㅎ",
+        "startDate": "2023-10-31",
+        "endDate": "2023-11-09",
+        "state": false,
+        "id": "aca83579-f9a9-4cda-99c0-52d51aad67c2"
+      },
+      {
+        "title": "집에 가기",
+        "detail": "집에 가기",
+        "startDate": "2023-10-31",
+        "endDate": "2023-11-08",
+        "state": false,
+        "id": "670ee3f4-1137-4cc6-8dd3-45dd896fd8eb"
+      }
+    ],
+    "done": [
+      {
+        "title": "Jest 공부하기",
+        "detail": "Jest 공부",
+        "startDate": "2023-10-25",
+        "endDate": "2023-11-01",
+        "state": true,
+        "id": "cc96a597-63c0-4a2b-871f-e6501e857492"
+      },
+      {
+        "title": "안녕하세요 반가워요",
+        "detail": " 반가워요",
+        "startDate": "2023-10-26",
+        "endDate": "2023-11-08",
+        "state": true,
+        "id": "cc97ccc6-1eaf-4484-9d61-21d53ecd3080"
+      }
+    ]
+  }
+}
