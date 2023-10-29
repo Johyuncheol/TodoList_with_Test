@@ -1,49 +1,82 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { _addTodo } from "../../api/todos";
 import { useNavigate } from "react-router-dom";
 
 const Page = () => {
+  const navigate = useNavigate();
 
-  const navigate=useNavigate();
-const AddTodoHandler= async(event: React.FormEvent<HTMLFormElement>)=>{
+  const [InputData, setInputData] = useState({
+    title: "",
+    detail: "",
+    startDate: "",
+    endDate: "",
+    state:false
+  });
+
+  const AddTodoHandler = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget)
 
-    const addResult = await _addTodo({
-        title: formData.get('title') as string,
-        detail: formData.get('detail') as string,
-        startDate: formData.get('startDate') as string,
-        endDate: formData.get('endDate') as string
-    })
+    const addResult = await _addTodo(InputData);
 
-    if(!addResult){
-        alert('다시 시도해주세요');
+    if (!addResult) {
+      alert("다시 시도해주세요");
+    } else {
+      alert("추가 완료");
+      navigate(-1);
     }
-    else{
-        alert('추가 완료');
-        navigate(-1);
-      
-    }
-}
+  };
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setInputData({
+      ...InputData,
+      [name]: value,
+    });
+  };
 
   return (
     <MainContent>
-      <form className="addForm" onSubmit={AddTodoHandler}>
-        <input className="title" type="text" placeholder="title" name="title"/>
-        <textarea placeholder="detail" name="detail"/>
-        <label>
-          시작 날짜 : 
-          <input type="date" name="startDate" />
-        </label>
+    <form className="addForm" onSubmit={AddTodoHandler}>
+      <input
+        className="title"
+        type="text"
+        placeholder="title"
+        name="title"
+        value={InputData.title}
+        onChange={handleInputChange}
+      />
+      <textarea
+        placeholder="detail"
+        name="detail"
+        value={InputData.detail}
+        onChange={handleInputChange}
+      />
+      <label>
+        시작 날짜 :
+        <input
+          type="date"
+          name="startDate"
+          value={InputData.startDate}
+          onChange={handleInputChange}
+        />
+      </label>
 
-        <label>
-            끝 날짜 : 
-          <input type="date" name="endDate" />
-        </label>
-        <button>추가</button>
-      </form>
-    </MainContent>
+      <label>
+        끝 날짜 :
+        <input
+          type="date"
+          name="endDate"
+          value={InputData.endDate}
+          onChange={handleInputChange}
+        />
+      </label>
+      <button>추가</button>
+    </form>
+  </MainContent>
+
   );
 };
 
@@ -71,6 +104,5 @@ const MainContent = styled.section`
     textarea {
       height: 300px;
     }
-
   }
 `;
