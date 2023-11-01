@@ -19,6 +19,7 @@ const axiosClient = async (url: string, options: AxiosRequestConfig) => {
 };
 
 export const _addTodo = async (args: AddRequest) => {
+  console.log(123)
   try {
     //상태를 추가해 줌
     args = { ...args, state: false };
