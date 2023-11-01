@@ -1,14 +1,10 @@
 # TodoList_with_Test
-개발 과정 : https://johc.tistory.com/119
-클라이언트 : React.js 
-언어 : TypeScripts
-
-
-
-
-서버: node express
-언어 : javaScripts
-서버시작 : node app 
+#### 개발 과정 : https://johc.tistory.com/119
+#### 클라이언트 : React.js \n
+#### 언어 : TypeScripts
+#### 서버: node express
+#### 언어 : javaScripts
+#### 서버시작 : node app 
 
 API 명세는 아래와 같습니다 
 
