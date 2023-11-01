@@ -9,7 +9,7 @@ const Page = () => {
 
   const GetTodo = async () => {
     const _data = await _getTodo("running");
-    setData(_data);
+    setData(_data.slice(0,6));
   };
 
   useEffect(()=>{
@@ -18,8 +18,7 @@ const Page = () => {
 
   return (
     <MainContent>
-      zzz
-      <img src={Img_Man}></img>
+      <img src={Img_Man} alt="메인캐릭터"></img>
       <FallBoxs data={data}/>
     </MainContent>
   );

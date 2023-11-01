@@ -12,11 +12,10 @@ describe('render', () => {
       </MemoryRouter>
     );
     
-    // main에 zzz가 있는지 확인
+    // header에 각 메뉴가 있는지 확인
     expect(container).toHaveTextContent('홈');
     expect(container).toHaveTextContent('투두 작성');
     expect(container).toHaveTextContent('투두 전체');
     expect(container).toHaveTextContent('로그인');
-
   });
 });
