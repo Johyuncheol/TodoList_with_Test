@@ -2,20 +2,20 @@
   "todos": {
     "running": [
       {
-        "title": "ㅎㅎ",
-        "detail": "ㅎㅎ",
-        "startDate": "2023-10-31",
-        "endDate": "2023-11-09",
-        "state": false,
-        "id": "aca83579-f9a9-4cda-99c0-52d51aad67c2"
-      },
-      {
         "title": "집에 가기",
         "detail": "집에 가기",
         "startDate": "2023-10-31",
         "endDate": "2023-11-08",
         "state": false,
         "id": "670ee3f4-1137-4cc6-8dd3-45dd896fd8eb"
+      },
+      {
+        "title": "ㅎㅎ",
+        "detail": "ㅎㅎ",
+        "startDate": "2023-10-31",
+        "endDate": "2023-11-09",
+        "state": false,
+        "id": "aca83579-f9a9-4cda-99c0-52d51aad67c2"
       }
     ],
     "done": [

@@ -4,6 +4,13 @@ import { MemoryRouter } from 'react-router-dom'; // MemoryRouter를 가져옴
 import '@testing-library/jest-dom/extend-expect';
 import Header from '../layout/Header';
 
+
+/*
+  테스트 항목 :
+      각 헤더에 보여줘야할 '홈' ,'투두 작성' ,'투두 전체' ,'로그인'이 포함되었는지
+            
+*/
+
 describe('render', () => {
   it('Header_render', () => {
     const { container } = render(
